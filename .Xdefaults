@@ -1,0 +1,38 @@
+source ~/.cache/wal/colors.sh 
+
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: false 
+URxvt.perl-ext-common: default,clipboard
+URxvt.scrollBar: false
+#URxvt.transparent: true
+#URxvt.shading: 20
+#URxvt*font: xft:Roboto Mono Nerd Font:pixelsize=14
+
+
+*foreground = ${xrdb:color7}
+*background = ${xrdb:color2}
+
+Urxvt -font "xft:DejaVu Sans Mono:size=12"
+#URxvt*font: xft:Terminess\ Powerline:pixelsize=14,xft:Fixed:antialias=false:style=ja:pixelsize=13
+#URxvt.font: xft:Nerd Font Complete :size=10.5
+URxvt.depth:                      32
+URxvt*scrollBar:                  false
+URxvt*mouseWheelScrollPage:       false
+URxvt*cursorBlink:                true
+URxvt*saveLines:                  5000
+URxvt*internalBorder: 5
+URxvt*geometry: 70x19
+
+
+
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
+
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
